@@ -23,17 +23,17 @@ const Hero = () => {
           "https://res.cloudinary.com/devsteveserver/image/upload/v1659019979/profile_loza8q.png"
         }
       />
-      <h1 className="text-4xl lg:text-6xl font-bold">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
         Palm<span className="text-purple-700">Search</span>
       </h1>
-      <div className="my-4 flex h-16 w-[350px] lg:w-[450px] items-center justify-center rounded-lg border-2 text-xl">
+      <div className="my-4 flex h-16 md:w-[450px] w-[320px] sm:w-[350px] items-center justify-center rounded-lg border-2 text-xl">
         <FaSearch className="mr-2 text-gray-500" />
         <input
           type="search"
           //   name="prompt"
           //   autoFocus="true"
           placeholder="What are you looking for?"
-          className="h-10 w-[80%] indent-2 outline-none"
+          className="h-10 w-[80%] sm:indent-2 outline-none"
         />
       </div>
     </div>

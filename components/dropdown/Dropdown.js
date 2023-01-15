@@ -4,7 +4,7 @@ import { links } from "../../constants/links";
 
 const Dropdown = () => {
   return (
-    <div className="absolute right-24 top-16 rounded-md border ">
+    <div className="absolute right-4 md:right-[3em] lg:right-[6em] top-16 rounded-md border ">
       {links.map((link) => (
         <div key={link.name}>
           <Link
