@@ -1,4 +1,5 @@
 import React from 'react'
+import Dropdown from '../dropdown/Dropdown'
 
 const Navbar = () => {
   return (
@@ -9,6 +10,7 @@ const Navbar = () => {
       <div className='border p-2 font-medium bg-purple-700 rounded-md text-white'>
         Need Help?
       </div>
+      <Dropdown/>
     </div>
   )
 }
