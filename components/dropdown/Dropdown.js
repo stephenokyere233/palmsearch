@@ -9,8 +9,9 @@ const Dropdown = () => {
         <div key={link.name}>
           <Link
             href={link.link}
+            target="_blank"
             style={{ borderBottom: `${link.border}` }}
-            className="flex cursor-pointer items-center bg-white px-4 py-2 text-xl font-medium  capitalize"
+            className="flex hover:bg-purple-600 cursor-pointer items-center bg-white px-4 py-2 text-xl font-medium  capitalize"
           >
             <link.icon style={{ color: `${link.color}` }} className="mr-1" />{" "}
             {link.name}

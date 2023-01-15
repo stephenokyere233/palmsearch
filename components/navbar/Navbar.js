@@ -1,18 +1,24 @@
-import React from 'react'
-import Dropdown from '../dropdown/Dropdown'
+import React, { useContext } from "react";
+import { AppContext } from "../../context/context";
+import Dropdown from "../dropdown/Dropdown";
 
 const Navbar = () => {
+  const { showMenu, setShowMenu } = useContext(AppContext);
+  const toggleMenu = () => {
+    setShowMenu((prev) => !prev);
+  };
   return (
-    <div className='border h-20 flex justify-between items-center px-[6em]'>
-      <div className='text-2xl font-bold uppercase'>
-        logo
-      </div>
-      <div className='border p-2 font-medium bg-purple-700 rounded-md text-white'>
+    <div className="flex h-20 items-center justify-between border px-[6em]">
+      <div className="text-2xl font-bold uppercase">logo</div>
+      <button
+        onClick={toggleMenu}
+        className="rounded-md  border bg-purple-700 p-2 font-medium text-white"
+      >
         Need Help?
-      </div>
-      <Dropdown/>
+      </button>
+      {showMenu && <Dropdown />}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
