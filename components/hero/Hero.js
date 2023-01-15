@@ -13,7 +13,7 @@ const Hero = () => {
     };
   const {showMenu,setShowMenu}=useContext(AppContext)
   return (
-    <div onClick={hideMenu} className="flex w-full flex-col items-center justify-center border">
+    <div onClick={hideMenu} className="flex w-full flex-col items-center justify-center border-y-2">
       <Image
         width={100}
         height={100}
@@ -30,8 +30,6 @@ const Hero = () => {
         <FaSearch className="mr-2 text-gray-500" />
         <input
           type="search"
-          //   name="prompt"
-          //   autoFocus="true"
           placeholder="What are you looking for?"
           className="h-10 w-[80%] sm:indent-2 outline-none"
         />

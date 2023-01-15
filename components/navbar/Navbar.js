@@ -8,7 +8,7 @@ const Navbar = () => {
     setShowMenu((prev) => !prev);
   };
   return (
-    <div className="flex h-20 items-center justify-between border px-4 md:px-[3em] lg:px-[6em]">
+    <div className="flex h-20 items-center justify-between px-4 md:px-[3em] lg:px-[6em]">
       <div className="text-2xl font-bold uppercase">logo</div>
       <button
         onClick={toggleMenu}
