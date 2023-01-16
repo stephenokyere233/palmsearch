@@ -7,9 +7,15 @@ const Navbar = () => {
   const toggleMenu = () => {
     setShowMenu((prev) => !prev);
   };
+      const hideMenu = () => {
+        setShowMenu(false);
+      };
   return (
-    <div className="flex h-20 items-center justify-between px-4 md:px-[3em] lg:px-[6em]">
-      <div className="text-2xl font-bold uppercase">logo</div>
+    <div  className="flex h-20 items-center justify-between px-4 md:px-[3em] lg:px-[6em]">
+      <div onClick={hideMenu} className="flex items-center flex-1 h-full">
+
+      <div className="text-2xl w-20 font-bold uppercase">logo</div>
+      </div>
       <button
         onClick={toggleMenu}
         className="rounded-md  border bg-purple-700 p-2 font-medium text-white"
