@@ -10,19 +10,16 @@ const Hero = () => {
     input.focus();
   }, []);
   const router = useRouter();
-  const hideMenu = () => {
-    setShowMenu(false);
-  };
-  const { showMenu, setShowMenu } = useContext(AppContext);
-  const [searchTerm, setSearchTerm] = useState("");
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setSearchTerm(value);
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    router.push(`/search/${searchTerm}`);
-  };
+
+  const {
+    searchTerm,
+    setSearchTerm,
+    showMenu,
+    hideMenu,
+    handleSubmit,
+    handleChange,
+  } = useContext(AppContext);
+
   return (
     <div
       onClick={hideMenu}
@@ -48,6 +45,7 @@ const Hero = () => {
         <input
           type="search"
           value={searchTerm}
+          name="search"
           onChange={handleChange}
           placeholder="What are you looking for?"
           className="h-10 w-[80%] outline-none sm:indent-2"
